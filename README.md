@@ -58,9 +58,12 @@ $  npm  run  start
  **GET /warehouse/items** - fetch items in warehouse
 Params:
 
-isCompleteXml - adds/removes starting and ending SHOP tags,
-limit - tells how many items we want to fetch (if not present we are fetching all),
-warehouseCode - filter results by warehouse,
+isCompleteXml - adds/removes starting and ending SHOP tags
+
+limit - tells how many items we want to fetch (if not present we are fetching all)
+
+warehouseCode - filter results by warehouse
+
 lastUpdate - filter results by lastUpdate (takes ones that are newer)
 
  **GET /warehouse/sets** - fetch sets in warehouse
