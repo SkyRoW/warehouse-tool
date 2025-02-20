@@ -1,8 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { FlexiBeeService } from "src/flexibee/service/flexibee.service";
 import { XmlService } from "src/xml/service/xml.service";
-import { GetItemsQuery } from "../model/get-items.query";
-import { Response } from 'express';
 import { FlexiBeeItemsQuery } from "src/flexibee/model/flexibee-items-query";
 import { ShopItem } from "../model/shop-item.model";
 
@@ -24,7 +22,7 @@ export class WarehouseService {
         for (const code of codes) {
             const stock = await this.flexiBeeService.getWarehouseStockByCode(code);
             items.push({
-                itemId: code,
+                itemId: code.replace(/^code:/,''),
                 warehouseStocks: stock
             })
         }

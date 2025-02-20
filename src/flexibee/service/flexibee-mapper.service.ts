@@ -8,10 +8,10 @@ import { WarehouseStock } from "src/warehouse/model/warehouse-stock.model";
 export class FlexiBeeMapperService {
     mapFlexiBeeShopItemToDomainShopItem(flexiBeeShopItem: FlexiBeeShopItem): ShopItem {
         return {
-            itemId: flexiBeeShopItem.cenik.replace('code:',''),
+            itemId: flexiBeeShopItem.cenik.replace(/^code:/,''),
             warehouseStocks: [
                 {
-                    warehouseName: flexiBeeShopItem.sklad.replace('code:',''),
+                    warehouseName: flexiBeeShopItem.sklad.replace(/^code:/,''),
                     quantity: flexiBeeShopItem.dostupMj,
                 }
             ]
