@@ -35,10 +35,10 @@ $  npm  install
 Create .env file with Flexi credentials
 
 ```bash
-FLEXIBEE_SERVER=
-FLEXIBEE_COMPANY=
-FLEXIBEE_USERNAME=
-FLEXIBEE_PASSWORD=
+FLEXIBEE_SERVER=server:port
+FLEXIBEE_COMPANY=company
+FLEXIBEE_USERNAME=username
+FLEXIBEE_PASSWORD=password
 ```
 
   
